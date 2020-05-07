@@ -59,8 +59,8 @@ function App() {
           else { return <div className="text-left"><h4> <span className="text-danger">{item.name}:</span> {item.text}</h4><h6 className="text-black-50">({item.time.split(" GMT")[0]})</h6></div> }
         })}
         </div>
-        <div className="chatlog" style={{ position: "absolute", bottom: "10vh", width: "70%" }}>
-          <form onSubmit={(e) => submitChat(e)}>
+        <div className="chatlog" style={{ position: "absolute", bottom: "10vh" }}>
+          <form onSubmit={(e) => submitChat(e)} style={{width: "100vh"}}>
             <input name="chat" type="text" style={{ width: "70%", border: "1px solid black", borderRadius: '5px' }} />
             <button className="btn btn-primary ml-3" type="submit">Send</button>
           </form>
