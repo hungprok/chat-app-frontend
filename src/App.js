@@ -89,7 +89,8 @@ function App() {
                 return <div >
                   <h4 className="text-left d-flex justify-content-start">
                     <span className="text-danger" style={{ lineHeight: '100%', padding: '15px' }}>{item.name}: </span>
-                    <span style={{ borderRadius: '15px', backgroundColor: 'lightgrey', padding: '15px', lineHeight: '100%' }}>{item.text}</span>
+                    <span onClick={() => setShowTime(!showTime)} style={{ borderRadius: '15px', backgroundColor: 'lightgrey', padding: '15px', lineHeight: '100%' }}>{item.text}</span>
+                    {(showTime) ? <h6 className="text-right text-black-50">({item.createdAt.split("T")[0]})</h6> : ''}
                   </h4>
                 </div>
               }
