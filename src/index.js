@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+var messageBody = document.getElementById("message-window")
+if (messageBody != null) { 
+  messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight }
+
 
 ReactDOM.render(
-    <App />,
-  document.getElementById('root')
+
+  <App />,
+  document.getElementById('root'),
+
 );
 
 // If you want your app to work offline and load faster, you can change
