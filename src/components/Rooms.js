@@ -26,13 +26,15 @@ export default function Rooms(props) {
         socket.on('joinNewRoom', data => joinRoom(data))
     })
 
+    console.log(roomList);
+
     return (
         <div className="text-center">
             {
                 roomList.map((item) => {
                     return <button className='btn btn-danger m-1' style={{ width: '95%', borderRadius: '10px', height: '60px', fontSize: '20px' }}
                         key={item._id} onClick={() => { joinRoom(item._id) }}>
-                        {item.name.toUpperCase()}
+                        {item.name.toUpperCase()} ({item.members.length})
                     </button>
                 })
             }
